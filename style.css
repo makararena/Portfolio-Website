@@ -377,6 +377,13 @@ section {
   margin-bottom: 2rem;
 }
 
+.intro-text {
+  text-align: center; /* Center-align the text */
+  margin: 1rem 0; /* Optional: Adjust margin for spacing */
+  font-size: 1.5rem; /* Adjust font size as needed */
+  color: #837d7d; /* Change color if desired */
+}
+
 .experience-details-container {
   display: flex;
   justify-content: center;
@@ -412,6 +419,7 @@ article .icon {
 .color-container {
   border-color: var(--container-border);
   background: var(--primary-color-2);
+  padding: 1rem; /* Adjust to control overall padding */
 }
 
 .project-img {
@@ -423,6 +431,21 @@ article .icon {
 .project-title {
   margin: 1rem;
   color: var(--secondary-color);
+  text-align: center; /* Center-align project titles */
+}
+
+.prj-container {
+  display: flex;
+  align-items: center; /* Vertically center the items */
+  justify-content: space-between; /* Space between the text and button */
+  padding-left: 1rem; /* Adjust left padding as needed */
+  padding-right: 3rem; /* Adjust right padding as needed */
+}
+
+.github-description {
+  font-size: 0.9rem;
+  color: #837d7d;
+  margin: 0; /* Remove extra margin if needed */
 }
 
 .project-btn {
@@ -431,23 +454,26 @@ article .icon {
 }
 
 /* CONTACT */
-
 #contact {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  min-height: 70vh;
+  padding: 1rem;
 }
 
 .contact-info-upper-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   border-radius: 2rem;
   border: var(--button-border);
   border-color: var(--container-border);
   background: var(--background-color);
   margin: 2rem auto;
-  padding: 0.5rem;
+  padding: 1rem;
+  max-width: 600px;
+  width: 90%;
 }
 
 .contact-info-container {
@@ -455,20 +481,78 @@ article .icon {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  min-width: 200px;
 }
 
 .contact-info-container p {
-  font-size: larger;
+  font-size: 1rem;
+  margin: 0;
 }
 
 .contact-icon {
   cursor: default;
-  padding-left: 1rem;
 }
 
 .email-icon {
+  height: 3.3rem !important;
+  width: auto !important;
+  margin-left: -0.5rem;
+
+}
+
+.icon {
+  width: 2.5rem;
   height: 2.5rem;
+  object-fit: contain;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .contact-info-upper-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    width: 85%;
+  }
+
+  .contact-info-container {
+    width: auto;
+    justify-content: flex-start;
+    margin: 0.25rem 1rem;
+  }
+  
+  .contact-info-container a {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #contact {
+    padding: 0.5rem;
+  }
+  
+  .contact-info-upper-container {
+    width: 80%;
+    padding: 0.75rem;
+  }
+  
+  .contact-info-container {
+    flex-direction: row;
+    text-align: left;
+    gap: 1rem;
+    margin: 0.25rem 0.75rem;
+  }
+  
+  .contact-info-container p {
+    font-size: 0.9rem;
+  }
+  
+  .icon {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 /* FOOTER SECTION */
