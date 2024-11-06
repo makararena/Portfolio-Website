@@ -5,31 +5,31 @@
 /* Default Light Mode */
 :root {
   --primary-color: white;
-  --primary-color-2: rgb(250, 250, 250);
-  --primary-color-3: rgb(181, 181, 181);
-  --background-color: rgb(255, 255, 255);
+  --primary-color-2: rgb(251, 251, 251);
+  --primary-color-3: rgb(180, 180, 180);
+  --background-color: rgb(254, 254, 254);
   --secondary-color: black;
-  --secondary-color-2: rgb(85, 85, 85);
-  --button-background: rgb(53, 53, 53);
+  --secondary-color-2: rgb(86, 86, 86);
+  --button-background: rgb(52, 52, 52);
   --button-text-hover: grey;
-  --button-border: rgb(53, 53, 53) 0.1rem solid;
-  --button-border-2: rgb(255, 255, 255) 0.1rem solid;
-  --container-border: rgb(163, 163, 163);
+  --button-border: rgb(52, 52, 52) 0.1rem solid;
+  --button-border-2: rgb(254, 254, 254) 0.1rem solid;
+  --container-border: rgb(162, 162, 162);
 }
 
 /* Dark Mode */
 [theme="dark"] {
   --primary-color: black;
-  --primary-color-2: rgb(39, 39, 39);
-  --primary-color-3: rgb(74, 74, 74);
-  --background-color: rgb(33, 33, 33);
+  --primary-color-2: rgb(40, 40, 40);
+  --primary-color-3: rgb(75, 75, 75);
+  --background-color: rgb(32, 32, 32);
   --secondary-color: white;
-  --secondary-color-2: rgb(170, 170, 170);
-  --button-background: rgb(202, 202, 202);
+  --secondary-color-2: rgb(171, 171, 171);
+  --button-background: rgb(201, 201, 201);
   --button-text-hover: lightgrey;
-  --button-border: rgb(202, 202, 202) 0.1rem solid;
+  --button-border: rgb(201, 201, 201) 0.1rem solid;
   --button-border-2: rgb(0, 0, 0) 0.1rem solid;
-  --container-border: rgb(92, 92, 92);
+  --container-border: rgb(90, 90, 90);
 }
 
 * {
@@ -439,18 +439,21 @@ article .icon {
   align-items: center; /* Vertically center the items */
   justify-content: space-between; /* Space between the text and button */
   padding-left: 1rem; /* Adjust left padding as needed */
-  padding-right: 3rem; /* Adjust right padding as needed */
+  padding-right: 1rem; /* Adjust right padding as needed */
 }
 
 .github-description {
   font-size: 0.9rem;
   color: #837d7d;
   margin: 0; /* Remove extra margin if needed */
+  padding-right: 20px;
 }
 
 .project-btn {
   color: var(--secondary-color);
   border-color: var(--container-border);
+  width: 150px; /* Set static width */
+  height: 50px;
 }
 
 /* CONTACT */
