@@ -48,15 +48,14 @@
           <li><a href="#about" data-i18n="nav.about">About</a></li>
           <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
           <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
-          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
           
           <!-- Simple language selector -->
           <li>
             <select id="languageSwitcher" class="nav-select" aria-label="Select Language">
-              <option value="en">🇬🇧 English</option>
-              <option value="ru">🇷🇺 Русский</option>
-              <option value="de">🇩🇪 Deutsch</option>
-              <option value="pl">🇵🇱 Polski</option>
+              <option value="en">English</option>
+              <option value="ru">Русский</option>
+              <option value="de">Deutsch</option>
+              <option value="pl">Polski</option>
             </select>
           </li>   
           <li>
@@ -89,7 +88,6 @@
       <li><a href="#about" data-i18n="nav.about" onclick="toggleMenu()">O mnie</a></li>
       <li><a href="#experience" data-i18n="nav.experience" onclick="toggleMenu()">Doświadczenie</a></li>
       <li><a href="#projects" data-i18n="nav.projects" onclick="toggleMenu()">Projekty</a></li>
-      <li><a href="#contact" data-i18n="nav.contact" onclick="toggleMenu()">Kontakt</a></li>
 
       <!-- Theme Toggle Icon -->
       <img
@@ -103,67 +101,69 @@
 
       <!-- Language Selector -->
       <select id="languageSwitcherMobile" aria-label="Select Language">
-        <option value="en">🇬🇧 English</option>
-        <option value="ru">🇷🇺 Русский</option>
-        <option value="de">🇩🇪 Deutsch</option>
-        <option value="pl">🇵🇱 Polski</option>
+        <option value="en">English</option>
+        <option value="ru">Русский</option>
+        <option value="de">Deutsch</option>
+        <option value="pl">Polski</option>
       </select>
     </div>
   </div>
 </nav>
 
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Makar Charviakou profile picturef" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1" data-i18n="profile.greeting">Greetings, I’m</p>
-        <h1 class="title" data-i18n="profile.name">Makar Charviakou</h1>
-        <p class="section__text__p2" data-i18n="profile.role">Data Analyst</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume.pdf')"
-            data-i18n="profile.download"
-          >
-            Download CV
-          </button>
-          <button
-            class="btn btn-color-1"
-            onclick="location.href='./#contact'"
-            data-i18n="profile.contactInfo"
-          >
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin_light.png"
-            src-light="./assets/linkedin_light.png"
-            src-dark="./assets/linkedin_dark.png"
-            alt="My LinkedIn profile"
-            class="icon linkedin-icon"
-            onclick="location.href='https://www.linkedin.com/in/makar-charviakou-b72526279/'"
-          />
-          <img
-            src="./assets/github_light.png"
-            src-light="./assets/github_light.png"
-            src-dark="./assets/github_dark.png"
-            alt="My github profile"
-            class="icon github-icon"
-            onclick="location.href='https://github.com/makararena'"
-          />
-          <img
-            src="./assets/telegram_light.png"
-            src-light="./assets/telegram_light.png"
-            src-dark="./assets/telegram_dark.png"
-            alt="My telegram"
-            class="icon telegram-icon"
-            onclick="location.href='https://t.me/makararena'"
-          />
-        </div>
-      </div>
-    </section>
+<section id="profile">
+  <div class="section__pic-container">
+    <img src="./assets/profile-pic.png" alt="Makar Charviakou profile picturef" />
+  </div>
+  <div class="section__text">
+    <p class="section__text__p1" data-i18n="profile.greeting">Greetings, I’m</p>
+    <h1 class="title" data-i18n="profile.name">Makar Charviakou</h1>
+    <p class="section__text__p2" data-i18n="profile.role">Data Analyst</p>
+    
+    <div id="socials-container">
+      <img
+        src="./assets/linkedin_light.png"
+        src-light="./assets/linkedin_light.png"
+        src-dark="./assets/linkedin_dark.png"
+        alt="My LinkedIn profile"
+        class="icon linkedin-icon"
+        onclick="location.href='https://www.linkedin.com/in/makar-charviakou-b72526279/'"
+      />
+      <img
+        src="./assets/github_light.png"
+        src-light="./assets/github_light.png"
+        src-dark="./assets/github_dark.png"
+        alt="My github profile"
+        class="icon github-icon"
+        onclick="location.href='https://github.com/makararena'"
+      />
+      <img
+        src="./assets/telegram_light.png"
+        src-light="./assets/telegram_light.png"
+        src-dark="./assets/telegram_dark.png"
+        alt="My telegram"
+        class="icon telegram-icon"
+        onclick="location.href='https://t.me/makararena'"
+      />
+      <img
+        src="./assets/gmail_light.png"
+        src-light="./assets/email_light.png"
+        src-dark="./assets/email_dark.png"
+        alt="My Gmail"
+        class="icon linkedin-icon"
+        onclick="location.href='mailto:makararena@gmail.com'"
+      />
+      <img
+      src="./assets/gmail_light.png"
+      src-light="./assets/cv_light.png"
+      src-dark="./assets/cv_dark.png"
+      alt="Download CV"
+      class="icon linkedin-icon"
+      onclick="window.open('./assets/resume.pdf', '_blank')"
+    />    
+    </div>
+  </div>
+</section>
+
     <section id="about">
       <p class="section__text__p1" data-i18n="about.heading">Get To Know More</p>
       <h1 class="title" data-i18n="about.title">About Me</h1>
@@ -185,7 +185,7 @@
                 alt="Experience icon"
                 class="icon"
               />
-              <h3 data-i18n="about.educationTitle">Education</h3>
+              <h3 data-i18n="nav.experience">Experience</h3>
               <p data-i18n="about.experienceText">2+ years <br />As a data analyst</p>
             </div>
             <div class="details-container">
@@ -202,7 +202,7 @@
           </div>
           <div class="text-container">
             <p data-i18n="about.mainText">
-              Hi there! I’m Makar, a data analyst who turns data into insights ...
+              Hi there! I’m Makar, a data analyst who turns data into insights.
             </p>
           </div>
         </div>
@@ -236,8 +236,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Power BI</h3>
-                  <p>Experienced</p>
+                  <h3 data-i18n="experience.powerbiTitle">Power BI</h3>
+                  <p data-i18n="experience.powerbiLevel">Experienced</p>
                 </div>
               </article>
               <article>
@@ -249,8 +249,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Tableau</h3>
-                  <p>Experienced</p>
+                  <h3 data-i18n="experience.tableauTitle">Tableau</h3>
+                  <p data-i18n="experience.tableauLevel">Experienced</p>
                 </div>
               </article>
               <article>
@@ -262,8 +262,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Metabase</h3>
-                  <p>Intermediate</p>
+                  <h3 data-i18n="experience.metabaseTitle">Metabase</h3>
+                  <p data-i18n="experience.metabaseLevel">Intermediate</p>
                 </div>
               </article>
               <article>
@@ -275,8 +275,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Yandex Metrica</h3>
-                  <p>Basic</p>
+                  <h3 data-i18n="experience.yandexTitle">Yandex Metrica</h3>
+                  <p data-i18n="experience.yandexLevel">Basic</p>
                 </div>
               </article>
               <article>
@@ -288,8 +288,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Excel & PowerQuery</h3>
-                  <p>Basic</p>
+                  <h3 data-i18n="experience.excelTitle">Excel & PowerQuery</h3>
+                  <p data-i18n="experience.excelLevel">Basic</p>
                 </div>
               </article>
               <article>
@@ -301,8 +301,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Google Analytics 4</h3>
-                  <p>Intermediate</p>
+                  <h3 data-i18n="experience.ga4Title">Google Analytics 4</h3>
+                  <p data-i18n="experience.ga4Level">Intermediate</p>
                 </div>
               </article>
             </div>
@@ -320,8 +320,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>PySpark</h3>
-                  <p>Experienced</p>
+                  <h3 data-i18n="experience.pysparkTitle">PySpark</h3>
+                  <p data-i18n="experience.pysparkLevel">Experienced</p>
                 </div>
               </article>
               <article>
@@ -333,8 +333,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Pandas</h3>
-                  <p>Experienced</p>
+                  <h3 data-i18n="experience.pandasTitle">Pandas</h3>
+                  <p data-i18n="experience.pandasLevel">Experienced</p>
                 </div>
               </article>
               <article>
@@ -346,8 +346,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Postgres</h3>
-                  <p>Intermediate</p>
+                  <h3 data-i18n="experience.postgresTitle">Postgres</h3>
+                  <p data-i18n="experience.postgresLevel">Intermediate</p>
                 </div>
               </article>
               <article>
@@ -359,8 +359,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Greenplum</h3>
-                  <p>Basic</p>
+                  <h3 data-i18n="experience.greenplumTitle">Greenplum</h3>
+                  <p data-i18n="experience.greenplumLevel">Basic</p>
                 </div>
               </article>
               <article>
@@ -372,8 +372,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Scikit-Learn</h3>
-                  <p>Basic</p>
+                  <h3 data-i18n="experience.scikitlearnTitle">Scikit-Learn</h3>
+                  <p data-i18n="experience.scikitlearnLevel">Basic</p>
                 </div>
               </article>
               <article>
@@ -385,8 +385,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Airflow</h3>
-                  <p>Intermediate</p>
+                  <h3 data-i18n="experience.airflowTitle">Airflow</h3>
+                  <p data-i18n="experience.airflowLevel">Intermediate</p>
                 </div>
               </article>
             </div>
@@ -404,8 +404,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Polish</h3>
-                  <p>Intermediate</p>
+                  <h3 data-i18n="experience.polishTitle">Polish</h3>
+                  <p data-i18n="experience.polishLevel">Intermediate</p>
                 </div>
               </article>
               <article>
@@ -417,8 +417,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>English</h3>
-                  <p>Intermediate</p>
+                  <h3 data-i18n="experience.englishTitle">English</h3>
+                  <p data-i18n="experience.englishLevel">Intermediate</p>
                 </div>
               </article>
               <article>
@@ -430,8 +430,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Russian</h3>
-                  <p>Intermediate</p>
+                  <h3 data-i18n="experience.russianTitle">Russian</h3>
+                  <p data-i18n="experience.russianLevel">Intermediate</p>
                 </div>
               </article>
               <article>
@@ -443,12 +443,13 @@
                   class="icon"
                 />
                 <div>
-                  <h3>German</h3>
-                  <p>Intermediate</p>
+                  <h3 data-i18n="experience.germanTitle">German</h3>
+                  <p data-i18n="experience.germanLevel">Intermediate</p>
                 </div>
               </article>
             </div>
           </div>
+          
         </div>
       </div>
       <img
@@ -527,48 +528,6 @@
       </div>
     </div>
   </section>
-
-
-    <section id="contact">
-      <h1 class="title" data-i18n="contact.title">Contact Me</h1>
-      <p class="intro-text" data-i18n="contact.intro">
-        This is a brief introduction to my experience in data analysis and how.
-      </p>
-        <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email_light.png"
-            src-light="./assets/email_light.png"
-            src-dark="./assets/email_dark.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:makararena@gmail.com">makararena@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin_light.png"
-            src-light="./assets/linkedin_light.png"
-            src-dark="./assets/linkedin_dark.png"
-            alt="My LinkedIn profile"
-            class="icon linkedin-icon"
-            onclick="location.href='https://www.linkedin.com/in/makar-charviakou-b72526279/'"
-          />
-          <p><a href="https://www.linkedin.com/in/makar-charviakou-b72526279/">LinkedIn</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/telegram_light.png"
-            src-light="./assets/telegram_light.png"
-            src-dark="./assets/telegram_dark.png"
-            alt="Telegram icon"
-            class="icon contact-icon telegram-icon"
-            onclick="location.href='https://t.me/makararena'"
-          />
-          <p><a href="https://t.me/makararena">Telegram</a></p>
-        </div>
-      </div>
-    </section>
     
     <footer>
       <nav>
@@ -577,7 +536,6 @@
             <li><a href="#about" data-i18n="nav.about">About</a></li>
             <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
             <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
-            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
       </nav>
