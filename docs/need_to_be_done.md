@@ -83,3 +83,67 @@ Here’s a clean and aligned version of your revised content, incorporating your
 ### Additional Notes:
 1. Ensure the code is modular and scalable to accommodate future additions like more education blocks or experience entries.
 2. Add a **"Education"** button in the header that anchors to the Education section of the page.
+
+-- also i would like to add in the skills part кпопку переключение hard skills - soft slills у меня должно быть 3 секции по hard skills и когда переключаю тоже должно быть 3 секции с soft skills
+
+
+
+Here’s how to include the **toggle button** for switching between **Hard Skills** and **Soft Skills**, with three sections for each:
+
+---
+
+### Updated **Skills Section**:
+
+### 2. **Skill Subcategories**
+- **Add a toggle button** to switch between **Hard Skills** and **Soft Skills**. The skills layout should dynamically update based on the selected category.
+- Structure:
+
+#### **Default View: Hard Skills**
+  - **BI Systems:**
+    - Power BI
+    - Metabase
+    - Tableau
+  - **Analytics Tools:**
+    - Google Analytics 4
+  - **Programming Languages:**
+    - Python
+    - SQL
+    - C++
+    - Java
+
+#### **Soft Skills View (On Toggle):**
+  - **Communication:**
+    - Clear, professional communication in English and Polish.
+    - Presenting analytical findings to stakeholders.
+  - **Problem-Solving:**
+    - Strategic thinking for data-driven decision-making.
+    - Identifying bottlenecks in analytics workflows.
+  - **Team Collaboration:**
+    - Coordinating with cross-functional teams.
+    - Agile collaboration in fast-paced environments.
+
+---
+
+### Implementation Notes:
+1. **Toggle Button Behavior:**
+   - The toggle button should dynamically change the displayed content when clicked.
+   - Example: "Show Hard Skills" → Displays Hard Skills.  
+     "Show Soft Skills" → Displays Soft Skills.
+   - Add a smooth transition for visual appeal when switching between the two views.
+
+2. **UI Design:**
+   - The toggle button can be styled as a switch or tabbed buttons (e.g., "Hard Skills" | "Soft Skills").
+   - Ensure the button is easily noticeable and accessible.
+
+3. **Scalability:**
+   - Design the section in a modular way so additional categories (e.g., "Leadership Skills") can be added in the future without breaking the layout.
+
+4. **Responsive Design:**
+   - Ensure the toggle and skill categories are responsive for both mobile and desktop views.
+
+---
+
+### Example Interaction Flow:
+1. User clicks the **Soft Skills** button.
+2. The skills section dynamically updates to display **Soft Skills** with the three subsections.
+3. User clicks the **Hard Skills** button to return to the original view.

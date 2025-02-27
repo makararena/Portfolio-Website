@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
+    <script type="text/javascript">
       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
       m[i].l=1*new Date();
       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
@@ -39,14 +39,26 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXPTCJDD"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Desktop Navigation -->
     <nav id="desktop-nav">
-      <div class="logo">Makar Charviakou</div>
+      <div class="logo" data-i18n="logo.text">Makar Charviakou</div>
       <div>
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          
+          <!-- Simple language selector -->
+          <li>
+            <select id="languageSwitcher" class="nav-select" aria-label="Select Language">
+              <option value="en">🇬🇧 English</option>
+              <option value="ru">🇷🇺 Русский</option>
+              <option value="de">🇩🇪 Deutsch</option>
+              <option value="pl">🇵🇱 Polski</option>
+            </select>
+          </li>   
           <li>
             <img
               id="modeToggle"
@@ -54,54 +66,73 @@
               src="./assets/theme_light.png"
               src-light="./assets/theme_light.png"
               src-dark="./assets/theme_dark.png"
-              alt="Color them icon"
+              alt="Color theme icon"
             />
-          </li>
+          </li>       
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Makar Charviakou</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-          <li>
-            <img
-              id="modeToggle2"
-              class="icon color-icon"
-              src="./assets/theme_light.png"
-              src-light="./assets/theme_light.png"
-              src-dark="./assets/theme_dark.png"
-              alt="Color them icon"
-            />
-          </li>
-        </div>
-      </div>
-    </nav>
+
+<!-- Mobile Navigation -->
+<nav id="hamburger-nav">
+  <div class="logo" data-i18n="logo.text">Makar Charviakou</div>
+  <div class="hamburger-menu">
+    <!-- Burger icon that toggles the menu -->
+    <div class="hamburger-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- The dropdown menu container -->
+    <div class="menu-links">
+      <li><a href="#about" data-i18n="nav.about" onclick="toggleMenu()">O mnie</a></li>
+      <li><a href="#experience" data-i18n="nav.experience" onclick="toggleMenu()">Doświadczenie</a></li>
+      <li><a href="#projects" data-i18n="nav.projects" onclick="toggleMenu()">Projekty</a></li>
+      <li><a href="#contact" data-i18n="nav.contact" onclick="toggleMenu()">Kontakt</a></li>
+
+      <!-- Theme Toggle Icon -->
+      <img
+        id="modeToggle2"
+        class="icon color-icon"
+        src="./assets/theme_light.png"
+        src-light="./assets/theme_light.png"
+        src-dark="./assets/theme_dark.png"
+        alt="Color theme icon"
+      />
+
+      <!-- Language Selector -->
+      <select id="languageSwitcherMobile" aria-label="Select Language">
+        <option value="en">🇬🇧 English</option>
+        <option value="ru">🇷🇺 Русский</option>
+        <option value="de">🇩🇪 Deutsch</option>
+        <option value="pl">🇵🇱 Polski</option>
+      </select>
+    </div>
+  </div>
+</nav>
+
     <section id="profile">
       <div class="section__pic-container">
         <img src="./assets/profile-pic.png" alt="Makar Charviakou profile picturef" />
       </div>
       <div class="section__text">
-        <p class="section__text__p1">Greetings, I’m</p>
-        <h1 class="title">Makar Charviakou</h1>
-        <p class="section__text__p2">Data Analyst</p>
+        <p class="section__text__p1" data-i18n="profile.greeting">Greetings, I’m</p>
+        <h1 class="title" data-i18n="profile.name">Makar Charviakou</h1>
+        <p class="section__text__p2" data-i18n="profile.role">Data Analyst</p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
             onclick="window.open('./assets/resume.pdf')"
+            data-i18n="profile.download"
           >
             Download CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          <button
+            class="btn btn-color-1"
+            onclick="location.href='./#contact'"
+            data-i18n="profile.contactInfo"
+          >
             Contact Info
           </button>
         </div>
@@ -123,19 +154,19 @@
             onclick="location.href='https://github.com/makararena'"
           />
           <img
-          src="./assets/telegram_light.png"
-          src-light="./assets/telegram_light.png"
-          src-dark="./assets/telegram_dark.png"
-          alt="My telegram"
-          class="icon telegram-icon"
-          onclick="location.href='https://t.me/makararena'"
-        />
+            src="./assets/telegram_light.png"
+            src-light="./assets/telegram_light.png"
+            src-dark="./assets/telegram_dark.png"
+            alt="My telegram"
+            class="icon telegram-icon"
+            onclick="location.href='https://t.me/makararena'"
+          />
         </div>
       </div>
     </section>
     <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
+      <p class="section__text__p1" data-i18n="about.heading">Get To Know More</p>
+      <h1 class="title" data-i18n="about.title">About Me</h1>
       <div class="section-container">
         <div class="section__pic-container">
           <img
@@ -154,8 +185,8 @@
                 alt="Experience icon"
                 class="icon"
               />
-              <h3>Experience</h3>
-              <p>2+ years <br />As a data analyst</p>
+              <h3 data-i18n="about.educationTitle">Education</h3>
+              <p data-i18n="about.experienceText">2+ years <br />As a data analyst</p>
             </div>
             <div class="details-container">
               <img
@@ -165,13 +196,13 @@
                 alt="Education icon"
                 class="icon"
               />
-              <h3>Education</h3>
-              <p>B.Sc. Pursuing Bachelors Degree<br />In the best computer academy in Poland</p>
+              <h3 data-i18n="about.educationTitle">Education</h3>
+              <p data-i18n="about.educationText">B.Sc. Pursuing Bachelors Degree<br />In the best computer academy in Poland</p>
             </div>
           </div>
           <div class="text-container">
-            <p>
-              Hi there! I’m Makar, a data analyst who turns data into insights to help businesses make smart decisions. I’m here to bring real value to your projects through data. I have previous experience in a large technology company, and I am currently working at the world’s second-largest human resources provider and temporary staffing firm. Additionally, I am pursuing a Computer Science degree in a part-time program.
+            <p data-i18n="about.mainText">
+              Hi there! I’m Makar, a data analyst who turns data into insights ...
             </p>
           </div>
         </div>
@@ -186,16 +217,15 @@
       />
     </section>
     <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <p class="intro-text">
-        I work with various tools for data analysis, big data, machine learning, and Universal Analytics systems, including Google Analytics 4 and Yandex Metrica. My broad skill set allows me to identify the most effective solutions for data challenges.
-        I am dedicated to data and its applications, continuously exploring new methodologies and technologies to improve my skills and achieve meaningful results. My key areas of expertise include:      </p>
+      <p class="section__text__p1" data-i18n="experience.heading">Explore My</p>
+      <h1 class="title" data-i18n="experience.title">Experience</h1>
+      <p class="intro-text" data-i18n="experience.intro">
+        I work with various tools for data analysis, big data, machine learning ...
+      </p>
       <div class="experience-details-container">
         <div class="about-containers">
-          
           <div class="details-container">
-            <h2 class="experience-sub-title">Data Analysis Stack</h2>
+            <h2 class="experience-sub-title" data-i18n="experience.dataAnalysisStack">Data Analysis Stack</h2>
             <div class="article-container">
               <article>
                 <img
@@ -277,7 +307,7 @@
               </article>
             </div>
           </div>
-          
+
           <div class="details-container">
             <h2 class="experience-sub-title">Data Science Stack</h2>
             <div class="article-container">
@@ -362,8 +392,6 @@
             </div>
           </div>
 
-
-
           <div class="details-container">
             <h2 class="experience-sub-title">Languages I Speak</h2>
             <div class="article-container">
@@ -372,7 +400,7 @@
                   src="./assets/polishflag.png"
                   src-light="./assets/polishflag.png"
                   src-dark="./assets/polishflag.png"
-                  alt="Experience icon"
+                  alt="Polish flag"
                   class="icon"
                 />
                 <div>
@@ -385,7 +413,7 @@
                   src="./assets/englishflag.png"
                   src-light="./assets/englishflag.png"
                   src-dark="./assets/englishflag.png"
-                  alt="Experience icon"
+                  alt="English flag"
                   class="icon"
                 />
                 <div>
@@ -398,7 +426,7 @@
                   src="./assets/russianflag.png"
                   src-light="./assets/russianflag.png"
                   src-dark="./assets/russianflag.png"
-                  alt="Experience icon"
+                  alt="Russian flag"
                   class="icon"
                 />
                 <div>
@@ -411,7 +439,7 @@
                   src="./assets/germanflag.png"
                   src-light="./assets/germanflag.png"
                   src-dark="./assets/germanflag.png"
-                  alt="Experience icon"
+                  alt="German flag"
                   class="icon"
                 />
                 <div>
@@ -432,84 +460,81 @@
         onclick="location.href='./#projects'"
       />
     </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <p class="intro-text">This is a brief introduction to my experience in data analysis and how I leverage various tools to derive insights This is a brief introduction to my experience in data analysis and how I leverage various tools to derive insights This is a brief introduction to my experience in data analysis and how I leverage various tools to derive insights This is a brief introduction to my experience in data analysis and how I leverage various tools to derive insights.</p>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">IT Jobs Aggregator</h2>
-            <div class="prj-container">
-              <p class="github-description">Created bots which scraped job-posting data and then analised it:</p>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/makararena/Polish-IT-Jobs-Aggregator'"
-              >
-                Github
-              </button>
-            </div>
+
+  <section id="projects">
+    <p class="section__text__p1" data-i18n="projects.heading">Browse My Recent</p>
+    <h1 class="title" data-i18n="projects.title">Projects</h1>
+    <p class="intro-text" data-i18n="projects.intro">
+      This is a brief introduction to my experience in data analysis and how I leverage various tools to derive insights.
+    </p>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        
+        <!-- Project 1 -->
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Analytics Project</h2>
-            <div class="prj-container">
-              <p class="github-description">Analised Data And Found Very Useful Information:</p>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://public.tableau.com/views/IBMSampleDashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link'"
-              >
-                Dashboard
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Database Architectures</h2>
-            <div class="prj-container">
-              <p class="github-description">Built database for business in all popular :</p>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/makararena/Polish-IT-Jobs-Aggregator'"
-              >
-                Github
-              </button>
-            </div>
+          <h2 class="experience-sub-title project-title" data-i18n="projects.prj1.title">IT Jobs Aggregator</h2>
+          <div class="prj-container">
+            <p class="github-description" data-i18n="projects.prj1.desc">
+              Created bots which scraped job-posting data and then analyzed it:
+            </p>
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/makararena/Polish-IT-Jobs-Aggregator'"
+              data-i18n="projects.prj1.button">
+              Github
+            </button>
           </div>
         </div>
+
+        <!-- Project 2 -->
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title" data-i18n="projects.prj2.title">Analytics Project</h2>
+          <div class="prj-container">
+            <p class="github-description" data-i18n="projects.prj2.desc">
+              Analyzed data and found very useful information:
+            </p>
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://public.tableau.com/views/IBMSampleDashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link'"
+              data-i18n="projects.prj2.button">
+              Dashboard
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title" data-i18n="projects.prj3.title">Database Architectures</h2>
+          <div class="prj-container">
+            <p class="github-description" data-i18n="projects.prj3.desc">
+              Built a database for businesses using all popular technologies:
+            </p>
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/makararena/Polish-IT-Jobs-Aggregator'"
+              data-i18n="projects.prj3.button">
+              Github
+            </button>
+          </div>
+        </div>
+
       </div>
-      <img
-        src="./assets/arrow_light.png"
-        src-light="./assets/arrow_light.png"
-        src-dark="./assets/arrow_dark.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
+    </div>
+  </section>
+
+
     <section id="contact">
-      <h1 class="title">Contact Me</h1>
-      <p class="intro-text">This is a brief introduction to my experience in data analysis and how.</p>
-      <div class="contact-info-upper-container">
+      <h1 class="title" data-i18n="contact.title">Contact Me</h1>
+      <p class="intro-text" data-i18n="contact.intro">
+        This is a brief introduction to my experience in data analysis and how.
+      </p>
+        <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img
             src="./assets/email_light.png"
@@ -518,7 +543,7 @@
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href= "mailto: makararena@gmail.com"> makararena@gmail.com </a></p>
+          <p><a href="mailto:makararena@gmail.com">makararena@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
           <img
@@ -538,20 +563,21 @@
             src-dark="./assets/telegram_dark.png"
             alt="Telegram icon"
             class="icon contact-icon telegram-icon"
-            onclick="location.href='https://t.me/makararena'" 
+            onclick="location.href='https://t.me/makararena'"
           />
-          <p><a href="https://t.me/makararena">Telegram</a></p> <!-- Replace with your actual Telegram username -->
+          <p><a href="https://t.me/makararena">Telegram</a></p>
         </div>
       </div>
     </section>
+    
     <footer>
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" data-i18n="nav.about">About</a></li>
+            <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
       </nav>
