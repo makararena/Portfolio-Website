@@ -122,6 +122,8 @@ nav a:hover {
 .hamburger-menu {
   position: relative;
   display: inline-block;
+  cursor: pointer;
+  color: var(--secondary-color);
 }
 
 .hamburger-icon {
@@ -140,7 +142,7 @@ nav a:hover {
   transition: all 0.3 ease-in-out;
 }
 
-.menu-links {
+/* .menu-links {
   position: absolute;
   top: 100%;
   right: 0;
@@ -149,9 +151,130 @@ nav a:hover {
   max-height: 0;
   overflow: hidden;
   transition: all 0.3 ease-in-out;
+} */
+
+
+/* ==================================
+   MOBILE MENU (Burger) REFINEMENTS
+   ================================== */
+
+/* The container that holds the menu links */
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  /* Subtle gradient instead of plain black */
+  background: linear-gradient(135deg, var(--primary-color-2), var(--primary-color-3));
+  
+  width: 260px;             /* Slightly wider for readability */
+  padding: 1.5rem 1rem;     /* Add vertical/horizontal padding */
+  border-radius: 10px;      /* Rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Depth effect */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  max-height: 0;            /* Collapsed by default (for the "open" animation) */
+  overflow: hidden;
+  opacity: 0;               /* Invisible by default */
+  z-index: 9999;            /* Ensure it sits on top of other elements */
+}
+
+/* When .menu-links has the 'open' class, reveal it */
+.menu-links.open {
+  max-height: 500px;        /* Large enough to fit all links */
+  opacity: 1;
+}
+
+/* Each menu item spacing + style */
+.menu-links li {
+  list-style: none;
+  margin: 0.5rem 0;
 }
 
 .menu-links a {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  width: 100%;
+  transition: color 0.2s;
+}
+
+.menu-links a:hover {
+  color: var(--button-background); /* Slight hover color change */
+}
+
+/* Theme toggle icon in the burger menu */
+.menu-links .icon.color-icon {
+  margin: 1rem auto;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+/* Language selector styling within the burger menu */
+.menu-links select {
+  appearance: none; /* Removes default browser styling */
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  
+  background: none; /* Transparent background */
+  border: none; /* No default border */
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.menu-links select::after {
+  content: "▼"; /* Unicode for dropdown arrow */
+  font-size: 1rem;
+  padding-left: 10px;
+}
+
+/* .menu-links select:hover,
+.menu-links select:focus {
+  outline: none;
+  border-left: 2px solid var(--button-background); /* Subtle underline effect
+} */
+
+/* 🌍 Fix Language Flag & Text Spacing */
+.menu-links option {
+  padding: 0.5rem;
+  background: var(--primary-color); /* Match theme */
+  color: var(--secondary-color);
+}
+
+/* Close icon (X) to dismiss the menu */
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.75rem;
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+
+/* .menu-links select {
+  width: 80%;
+  font-size: 1rem;
+  padding: 8px;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+} */
+
+/* .menu-links a {
   display: block;
   padding: 10px;
   text-align: center;
@@ -159,15 +282,15 @@ nav a:hover {
   color: var(--secondary-color);
   text-decoration: none;
   transition: all 0.3 ease-in-out;
-}
+} */
 
 .menu-links li {
   list-style: none;
 }
 
-.menu-links.open {
+/* .menu-links.open {
   max-height: 300px;
-}
+} */
 
 .hamburger-icon.open span:first-child {
   transform: rotate(45deg) translate(10px, 5px);
@@ -229,7 +352,8 @@ section {
 }
 
 .section__text p {
-  font-weight: 600;
+  font-weight: 1000;
+  font-size: 1.3em;
 }
 
 .section__text__p1 {
@@ -560,4 +684,20 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+.nav-select {
+  background: none;
+  border: none;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Remove default dropdown arrow on WebKit browsers */
+.nav-select::-webkit-inner-spin-button,
+.nav-select::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
